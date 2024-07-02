@@ -1,3 +1,4 @@
+#WHAT I LEARNED FROM THIS ACTIVITY IS IN THE README FILE theAlgorithm.md.
 #Code converted from Javascript to Python3
 import math
 import unittest
