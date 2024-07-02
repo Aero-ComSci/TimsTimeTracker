@@ -3,9 +3,9 @@ import math
 import unittest
 class testValidity(unittest.TestCase):
   def test_equal(self):
-    self.assertEqual(doSearch(primes, 73), 20)
-    self.assertEqual(doSearch(primes, 67), 18)
-    self.assertEqual(doSearch(primes, 23), 8)
+    self.assertEqual(doSearch(primes, 113), 4)
+    self.assertEqual(doSearch(primes, 137), 7)
+    self.assertEqual(doSearch(primes, 191), 17)
       
 def doSearch(array, targetValue):
   min = 0
@@ -25,12 +25,12 @@ def doSearch(array, targetValue):
   return -1
   
 #Part of original Javascript code
-primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 
-		41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-result = doSearch(primes, 73)
+#Data set used: List of all prime numbers from 101 to 200
+primes = [101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199]
+result = doSearch(primes, 113)
 print("Found prime at index " + result)
-result2 = doSearch(primes, 67)
+result2 = doSearch(primes, 137)
 print("Found prime at index " + result2)
-result3 = doSearch(primes, 23)
+result3 = doSearch(primes, 191)
 print("Found prime at index " + result3)
 unittest.main()
