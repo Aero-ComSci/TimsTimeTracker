@@ -7,4 +7,23 @@
 ### * The ability for admins to delete instruments that got recalled or simply are not sold by the store anymore
 ### * The ability for admins to tag whether or not an instrument is currently in stock
 
+## How To Use:
+---
+*Cloning the Repository*
+```
+git clone https://github.com/Aero-ComSci/3-2-1-LemonSCoder.git
+```
+*Changing the Project Directory*
+```
+cd 3-2-1-LemonSCoder
+```
+*Compiling the Program*
+```
+gcc 321.py -o 321
+```
+*Running the Program*
+```
+./321
+```
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/OgHQm8Y-)
