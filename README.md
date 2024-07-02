@@ -11,19 +11,20 @@
 ---
 *Cloning the Repository*
 ```
-git clone https://github.com/Aero-ComSci/3-2-1-LemonSCoder.git
+git clone https://github.com/Aero-ComSci/summer-hw-repository-LemonSCoder.git
 ```
 *Changing the Project Directory*
 ```
-cd 3-2-1-LemonSCoder
+cd summer-hw-repository-LemonSCoder
 ```
 *Compiling the Program*
 ```
-gcc 321.py -o 321
+gcc IssacsInstruments.py -o IssacsInstruments
 ```
 *Running the Program*
 ```
-./321
+./IssacsInstruments
 ```
+
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/OgHQm8Y-)
