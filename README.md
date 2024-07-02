@@ -2,7 +2,7 @@
 ---
 ### Issac's Interesting Instruments is a program intended to show the user a catalog of instruments sold by the aforementioned store based on their own personal preferences. This program uses Object Oriented Programming to get instruments, categorize instruments, delete instruments, list difficulty levels, list availability, and list prices for instruments. This program also utilizes a sorting algorithm in order to keep the catalog of instruments organized in a reasonable manner. This program solves the problem of searching for a desired object within a large list of objects by sorting these objects by availability and alphabetically or numerically by a certain category depending on what the user inputs. This program was intended to be practice for Object Oriented Programming, algorithms, and coding using the Github extension in Visual Studio Code by attempting to create a relatively unique program that implements these concepts. **SAY WHAT WE LEARNED**
 
-## Features
+## Features *ADD PICTURES*
 ---
 ### * The ability to add instruments, their instrument category, their level of difficulty, and their pricings if correct admin password is typed in
 ### * The ability for the user to ask to browse through instruments of a certain category and be given a sorted list of instruments with said category
