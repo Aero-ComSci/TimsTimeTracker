@@ -29,9 +29,9 @@ def doSearch(array, targetValue):
 #Data set used: List of all prime numbers from 101 to 200
 primes = [101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199]
 result = doSearch(primes, 113)
-print("Found prime at index " + result)
+print("Found prime at index " + str(result))
 result2 = doSearch(primes, 137)
-print("Found prime at index " + result2)
+print("Found prime at index " + str(result2))
 result3 = doSearch(primes, 191)
-print("Found prime at index " + result3)
+print("Found prime at index " + str(result3))
 unittest.main()
