@@ -1,13 +1,14 @@
-# Issac's Interesting Instruments
+# Timothy's Time Tracker
 ---
-### Issac's Interesting Instruments is a program intended to show the user a catalog of instruments sold by the aforementioned store based on their own personal preferences. This program uses Object Oriented Programming to get instruments, categorize instruments, delete instruments, list availability, and list prices for instruments. This program also utilizes a sorting algorithm in order to keep the catalog of instruments organized in a reasonable manner. This program solves the problem of searching for a desired object within a large list of objects by sorting these objects by availability and alphabetically or numerically by a certain category depending on what the user inputs. This program was intended to be practice for Object Oriented Programming, algorithms, and coding using the Github extension in Visual Studio Code by attempting to create a relatively unique program that implements these concepts. **SAY WHAT WE LEARNED**
+### Timothy's Time Tracker is a program intended to allow users to track their deadlines and important events based on a "priority ranking" and their date. This program uses Object Oriented Programming to get certain events and deadlines, change events and deadlines, categorize events and deadlines by priority and their date, and delete events and deadlines. This program also utilizes a sorting algorithm in order to keep deadlines and events organized in a reasonable manner. This program solves the problem of student time management and prioritization, for this program only requires students to input deadlines and events as well as for them to ask what's high on their priority list or which assignments are due soon for them rather than requiring students to log on to a website and click a variety of buttons in order to see their deadlines and events or requiring students to look through a calendar and find a particular timeframe within said calendar. This program was intended to be practice for Object Oriented Programming, algorithms, and coding using the Github extension in Visual Studio Code by attempting to create a relatively unique program that implements these concepts. **SAY WHAT WE LEARNED**
 
 ## Features *ADD PICTURES*
 ---
-### * The ability to add instruments, their instrument category, their availability, and their pricings if correct admin password is typed in
-### * The ability for the user to ask to browse through instruments of a certain category and be given a sorted list of instruments with said category
-### * The ability for admins to delete instruments that got recalled or simply are not sold by the store anymore
-### * The ability for admins to change whether or not an instrument is currently in stock
+### * The ability to add assignments and events as well as their deadlines and prioritization
+### * A notification for the student if the deadline or date for one of their assignments or events is approaching relatively soon (24 hours or less)
+### * The ability to request assignments or events depending on high they are on one's priority list as well as their deadline
+### * The ability to delete assignments or events once completed or not done by the time the deadline passes
+### * The ability to see exactly how many assignments or events fit a certain priority level or deadline
 
 ## How To Use:
 ---
@@ -21,11 +22,11 @@ cd summer-hw-repository-LemonSCoder
 ```
 *Compiling the Program*
 ```
-gcc IssacsInstruments.py -o IssacsInstruments
+gcc TimsTimeTracker.py -o TimsTimeTracker
 ```
 *Running the Program*
 ```
-./IssacsInstruments
+./TimsTimeTracker
 ```
 
 
