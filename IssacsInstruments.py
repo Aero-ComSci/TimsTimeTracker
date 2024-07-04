@@ -1,6 +1,7 @@
 import math
 #Dictionary for default instruments in this program
 #These prices aren't exactly accurate since instrument prices vary by size, brand, and quality
+browsing = True
 default_instruments = {
     "Flute" : ["Woodwind", "IN STOCK", 600.00],
     "Piano" : ["Percussion", "IN STOCK", 1700.00],
@@ -49,6 +50,7 @@ class Instrument():
     #Dunder method
     global instrument_list
     instrument_list = []
+    chosen_instrument_list = []
     def __init__(self, instruments, category, price):
         instruments = self.instruments
         category = self.category
@@ -58,9 +60,9 @@ class Instrument():
         category_checked = True
         type_of_instrument = input("What type of instrument do you want to search for? \n [A] Woodwind \n [B] Brass \n [C] Guitar Family \n [D] Percussion \n [E] Other \n")
         if price_checked == False:
-            for instrument, value in default_instruments.items():
+            for instrument, value in self.instruments.items():
                 if type_of_instrument.upper() == "A":
-                    if default_instruments[instrument][0] == "Woodwind":
+                    if self.instruments[instrument][0] == "Woodwind":
                         instrument_list.append([instrument, value])
                 elif type_of_instrument.upper() == "B":
                     if default_instruments[instrument][0] == "Brass":
@@ -103,6 +105,20 @@ class Instrument():
                 if instrument[1][2] > price_of_instrument:
                     instrument_list.remove(instrument)
         return instrument_list
+    def choose_instruments(self):
+        print(instrument_list)
+        choosing = True
+        while choosing == True:
+            which_ones = input("Which instrument do you want to choose? TYPE IN THE INSTRUMENT > ")
+            for instrument in instrument_list:
+                if instrument.upper() == which_ones.upper():
+                    chosen_instrument_list.append(which_ones)
+                    is_that_all = input("Is that all? \n [Y] Yes \n [N] No \n")
+                    if "Y" in is_that_all.upper():
+                        choosing = False
+                    elif "N" in is_that_all.upper():
+                        continue
+
     #Dunder method
     def __repr__(self):
         return "{}: CATEGORY: {} AVAILABILITY: {}, PRICE {}".format(self.instruments, self.category, self.price)
@@ -152,6 +168,14 @@ class InstrumentSettings(Instrument, Admin):
                         InstrumentSettings.del_instrument()
         else: 
             return "Sorry, you don't have access to this feature."
+    def __len__(self):
+        return "There are {} instruments available.".format(str(len(instrument_list)))
+    def __add__(self):
+        total = 0
+        for instrument in chosen_instrument_list:
+            for i in range(len(chosen_instrument_list)):
+                total += instrument[i][1][2]
+        return "Your total payment is ${}.".format(str(total))
     def change_instrument():
         check_role = Admin()
         check_role.enter_admin_passcode()
@@ -196,6 +220,10 @@ class InstrumentSettings(Instrument, Admin):
                         default_instruments[instrument][2] = change_price
         else:
             return "Sorry, you don't have access to this feature."
+#List instrument categories here
+while browsing == True:
+    def search():
+        pass
 
 
                 
