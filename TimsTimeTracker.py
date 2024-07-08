@@ -88,7 +88,6 @@ class PrioritySettings():
         self.sort_by = sort_by 
         self.to_delete = to_delete
         self.selection = selection
-        #super().__init__(self.name, self.event_type, self.date, self.priority_number, self.informal_day, self.informal_month, self.informal_year)
     def get_priority(self):
         if self.sort_by == "A":
             self.sort_by = "Priority Number"
