@@ -15,6 +15,7 @@
 ### * A viewable .JSON file with all of the user's events and assignments on it
 
 ---
+### Note: Screenshots for Options C and D were taken later during the debugging process (Option D was taken before Option C due to Option C having a couple unresolved errors).
 
 ### * Starting Interface 
 ![alt text](https://github.com/Aero-ComSci/summer-hw-repository-LemonSCoder/blob/main/images/Interface.png)...
