@@ -14,6 +14,7 @@
 ### * The ability for the user to see the current date and time in their timezone when opening the program
 ### * A viewable .JSON file with all of the user's events and assignments on it
 
+...
 ### * Starting Interface 
 ![alt text](https://github.com/Aero-ComSci/summer-hw-repository-LemonSCoder/blob/main/images/Interface.png)...
 
