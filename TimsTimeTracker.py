@@ -134,9 +134,18 @@ class PrioritySettings():
                 if (len(most_prioritized) == 0):
                     most_prioritized.append([key, value])
                 else:
-                    if (int(value[3]) > int(most_prioritized[0][1][3])):
+                    if (int(value[2]) > int(most_prioritized[0][1][2])):
                         most_prioritized.appendleft([key, value])
-                    elif (int(value[3]) < int(most_prioritized[0][1][3])) or (int(value[3]) == int(most_prioritized[0][1][3])):
+                    elif (int(value[2]) <= int(most_prioritized[0][1][2])):
+                        if len(most_prioritized) == 1:
+                            most_prioritized.append([key, value])
+                        else:
+                            if (int(value[2]) < int(most_prioritized[1][1][2])) or (int(value[2]) == int(most_prioritized[1][1][2])):
+                                if (int(value[2]) < int(most_prioritized[-1][1][2])) or (int(value[2]) == int(most_prioritized[-1][1][2])):
+                                    most_prioritized.append([key, value])
+                            else:
+                                most_prioritized.insert(1, [key, value])
+                    else:
                         most_prioritized.append([key, value])
             most_prioritized = dict(most_prioritized)
             for item in most_prioritized.keys():
@@ -153,12 +162,32 @@ class PrioritySettings():
                 if (now.strftime("%m") + " " + now.strftime("%d") + " " + now.strftime("%Y")) != str(value[2]):
                     if (len(nearest_dates) == 0):
                         nearest_dates.append([key, value])
-                    elif (str(value[3]) <= nearest_dates[0][1][3]) and (str(value[4]) <= nearest_dates[0][1][4] and str(value[5]) <= nearest_dates[0][1][5]):
-                        #Earlier dates are ensured to be listed first.
-                        nearest_dates.appendleft([key, value])
                     else:
-                        #Later dates get pushed back in favor of earlier dates.
-                        nearest_dates.append([key, value])
+                        if len(nearest_dates) == 1:
+                            nearest_dates.append([key, value])
+                        elif (int(value[3]) <= int(nearest_dates[0][1][3])) and (int(value[4]) <= int(nearest_dates[0][1][5]) and int(value[5]) <= int(nearest_dates[0][1][4])):
+                            #Earlier dates are ensured to be listed first.
+                            nearest_dates.appendleft([key, value])
+                        elif (str(value[5]) >= nearest_dates[0][1][4]):
+                            if int(value[3]) >= int(nearest_dates[0][1][3]):
+                                if int(value[4]) >= int(nearest_dates[0][1][5]):
+                                    if (int(value[4]) <= int(nearest_dates[1][1][5])):
+                                        if int(value[3]) <= int(nearest_dates[1][1][3]):
+                                            if int(value[4]) <= int(nearest_dates[1][1][4]):
+                                                nearest_dates.insert(1, [key, value])
+                                        else:
+                                            nearest_dates.append([key, value])
+                                    else:
+                                        nearest_dates.append([key, value])
+                                else:
+                                    nearest_dates.append([key, value])
+                            else:
+                                nearest_dates.append([key, value])
+                        elif (int(value[4]) == int(nearest_dates[-1][1][5]) and int(value[3]) <= int(nearest_dates[-1][1][3]) and int(value[5]) <= int(nearest_dates[-1][1][4])):
+                            nearest_dates.insert(1, [key, value])
+                        else:
+                            #Later dates get pushed back in favor of earlier dates.
+                            nearest_dates.append([key, value])
             nearest_dates = dict(nearest_dates)
             for item in nearest_dates.keys():
                 if count <= 5:
@@ -200,7 +229,7 @@ while program_running == True:
         elif "B" in what_event.upper():
             what_event = "ASSIGNMENT"
         else:
-            print("Invalid option. Setting an event.")
+            print("Invalid option.")
             continue
         if setup(what_event) != " ":
             event_at_hand = Priority(event_info[0][0], event_info[0][1], event_info[0][2], event_info[0][3], event_info[0][4], event_info[0][5], event_info[0][6])
